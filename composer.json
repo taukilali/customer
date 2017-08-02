@@ -1,9 +1,9 @@
 {
-    "name": "redboxdigital/customer",
+    "name": "redboxdigitals/customer",
     "description": "Customer Profile update!",
     "require": {
         "magento/project-community-edition": "*",
-        "redboxdigital/customer": "0.0.*"
+        "redboxdigitals/customer": "0.0.*"
     },
     "version": "0.0.1",
     "extra": {
