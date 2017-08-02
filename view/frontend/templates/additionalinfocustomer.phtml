@@ -1,0 +1,26 @@
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$scopeConfig = $objectManager->create('\Magento\Framework\App\Config\ScopeConfigInterface');
+
+$customerSession = $block->getCustomerSession();
+$linkedinProfile = $block->getLinkedinProfile();
+if($customerSession->isLoggedIn()) 
+{
+    $linkedinProfile = $customerlinkedn;
+}else{
+    $linkedinProfile = '';
+}
+
+?>
+<fieldset class="fieldset create account" data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>">
+    <legend class="legend"><span><?php /* @escapeNotVerified */ echo __('Additional Information') ?></span></legend>
+    <p>
+    <div class="field regulation <?php echo $scopeConfig->getValue('custom_attributes/linkedin_profle/mandatory')?'required':'' ?> ">
+        <label for="regulation" class="label"><span><?php /* @escapeNotVerified */
+                echo __('LinkedIn Profile URL') ?></span></label>
+        <div class="control">
+            <input type="text" name="linkedin_profile" id="linkedin_profile" value="<?php echo $linkedinProfile ?>" title="<?php /* @escapeNotVerified */ echo __('LinkedIn Proile URL') ?>" class="input-text validate-length maximum-length-200 validate-clean-url" data-validate="{required:<?php echo $scopeConfig->getValue('custom_attributes/linkedin_profle/mandatory')?'true':'false' ?>}">
+        </div>
+    </div>
+    </p>
+</fieldset>

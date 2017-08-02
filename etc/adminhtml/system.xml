@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="custom_attributes" translate="label" type="text" sortOrder="100" showInDefault="1" >
+            <label>Custom Attributes</label>
+            <tab>customer</tab>
+            <resource>RedboxDigital_Linkedin::config</resource>
+            <group id="linkedin_profle" translate="label" type="text" sortOrder="10" showInDefault="1" >
+                <label>Linkedin Profile URL</label>
+                <field id="mandatory" translate="label" type="select" sortOrder="1" showInDefault="1">
+                    <label>Manage Linkedin Customer Profile</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
